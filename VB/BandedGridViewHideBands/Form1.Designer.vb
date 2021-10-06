@@ -1,4 +1,4 @@
-﻿' Developer Express Code Central Example:
+' Developer Express Code Central Example:
 ' BandedGridView - How to hide particular Bands
 ' 
 ' This example illustrates how to hide a particular Band and draw on its place
@@ -6,9 +6,10 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E3175
-
 Namespace BandedGridViewHideBands
-    Partial Public Class Form1
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -19,14 +20,14 @@ Namespace BandedGridViewHideBands
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -42,8 +43,8 @@ Namespace BandedGridViewHideBands
             Me.bandedGridColumn4 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
             Me.bandedGridColumn2 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
             Me.bandedGridColumn1 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-            DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.bandedGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.gridControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.bandedGridView2), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' gridControl1
@@ -56,19 +57,19 @@ Namespace BandedGridViewHideBands
             Me.gridControl1.Name = "gridControl1"
             Me.gridControl1.Size = New System.Drawing.Size(757, 474)
             Me.gridControl1.TabIndex = 0
-            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.bandedGridView2})
+            Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.bandedGridView2})
             ' 
             ' bandedGridView2
             ' 
-            Me.bandedGridView2.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() { Me.gridBand1})
-            Me.bandedGridView2.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() { Me.bandedGridColumn1, Me.bandedGridColumn2, Me.bandedGridColumn3, Me.bandedGridColumn4, Me.bandedGridColumn5})
+            Me.bandedGridView2.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.gridBand1})
+            Me.bandedGridView2.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.bandedGridColumn1, Me.bandedGridColumn2, Me.bandedGridColumn3, Me.bandedGridColumn4, Me.bandedGridColumn5})
             Me.bandedGridView2.GridControl = Me.gridControl1
             Me.bandedGridView2.Name = "bandedGridView2"
             ' 
             ' gridBand1
             ' 
             Me.gridBand1.Caption = "gridBand1"
-            Me.gridBand1.Children.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() { Me.gridBand3, Me.gridBand2})
+            Me.gridBand1.Children.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.gridBand3, Me.gridBand2})
             Me.gridBand1.MinWidth = 20
             Me.gridBand1.Name = "gridBand1"
             Me.gridBand1.VisibleIndex = 0
@@ -137,24 +138,31 @@ Namespace BandedGridViewHideBands
             Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.bandedGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.gridControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.bandedGridView2), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+#End Region
         Private gridControl1 As DevExpress.XtraGrid.GridControl
+
         Private bandedGridView2 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridView
+
         Private gridBand1 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
+
         Private gridBand3 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
+
         Private bandedGridColumn3 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+
         Private bandedGridColumn5 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+
         Private gridBand2 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
+
         Private bandedGridColumn4 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+
         Private bandedGridColumn2 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+
         Private bandedGridColumn1 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
     End Class
 End Namespace
-
